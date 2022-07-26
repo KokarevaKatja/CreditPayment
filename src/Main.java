@@ -1,5 +1,3 @@
-import static java.lang.Math.round;
-
 public class Main {
     public static void main(String[] args) {
         CreditPaymentService service = new CreditPaymentService();
@@ -12,9 +10,9 @@ public class Main {
 
         double creditPayment = service.calculate(creditAmount, creditRate, months);
 
-        System.out.println(service.calculate(1_000_000, 9.9, 12));
-        System.out.println(service.calculate(1_000_000, 9.9, 24));
-        System.out.println(service.calculate(1_000_000, 9.9, 36));
+        System.out.println(Math.round(service.calculate(1_000_000, 9.9, 12)));
+        System.out.println(Math.round(service.calculate(1_000_000, 9.9, 24)));
+        System.out.println(Math.round(service.calculate(1_000_000, 9.9, 36)));
 
     }
 }
